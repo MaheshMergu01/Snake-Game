@@ -1,0 +1,26 @@
+// Game Constants & Variables
+
+let direction = { x: 0, y: 0 };
+const foodSound = new Audio("Music/food.mp3");
+const gameOverSound = new Audio("Music/gameoversound.mp3");
+const moveSound = new Audio("Music/move.mp3");
+const musicSound = new Audio("Music/music.mp3");
+let speed = 2;
+let lastPaintTime = 0;
+
+
+// Game Functions
+function main(ctime) {
+  window.requestAnimationFrame(main);
+  console.log(ctime);
+  if ((ctime - lastPaintTime) / 1000 < 1/speed){
+    return;
+  }
+  lastPaintTime = ctime;
+  gameEngine();
+}
+function gameEngine(){
+    // Part 1: Updating the Snake Array
+}
+// Main Logics
+window.requestAnimationFrame(main);
