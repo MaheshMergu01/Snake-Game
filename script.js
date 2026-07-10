@@ -28,8 +28,13 @@ function isCollide(snake) {
     if (snake[1].x === snake[0].x && snake[1].y === snake[0].y) {
       return true;
     }
-    
   }
+
+  // If you bumb into the wall
+    if (snake[0].x >= 18 || snake[0].x <= 0 && snake[0].y >= 18 || snake[0].y <= 0) {
+      return true;
+    }
+  
 }
 function gameEngine() {
   // Part 1: Updating the Snake Array & Food
