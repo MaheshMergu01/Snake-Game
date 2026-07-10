@@ -39,6 +39,7 @@ function gameEngine() {
 
   // If you have eaten the food, then Increment the score & regenerate the food
   if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
+    foodSound.play();
     snakeArr.unshift({
       x: snakeArr[0].x + inputDir.x,
       y: snakeArr[0].y + inputDir.y
