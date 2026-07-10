@@ -37,20 +37,27 @@ function gameEngine() {
     score = 0;
   }
 
-
   // If you have eaten the food, then Increment the score & regenerate the food
-if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
-  snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y})
-  let a = 2;
-  let b = 16;
-  food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a + (b-a)* Math.random())}
-}
+  if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
+    snakeArr.unshift({
+      x: snakeArr[0].x + inputDir.x,
+      y: snakeArr[0].y + inputDir.y
+    });
+    let a = 2;
+    let b = 16;
+    food = {
+      x: Math.round(a + (b - a) * Math.random()),
+      y: Math.round(a + (b - a) * Math.random())
+    };
+  }
 
-// Moving the Snake
-for (let i = snakeArr.length - 2; i>=0; i--) {
-  const element = array[i];
-  snakeArr[i+1] = snakeArr[i];
-}
+  // Moving the Snake
+  for (let i = snakeArr.length - 2; i >= 0; i--) {
+    snakeArr[i + 1] = { ...snakeArr[i] };
+  }
+
+  snakeArr[0].x += inputDir.x;
+  snakeArr[0].y += inputDir.y;
 
   // Part 2: Display the Snake & Food
   //.Display the Snake
