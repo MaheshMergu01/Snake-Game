@@ -46,6 +46,12 @@ if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
   food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a + (b-a)* Math.random())}
 }
 
+// Moving the Snake
+for (let i = snakeArr.length - 2; i>=0; i--) {
+  const element = array[i];
+  snakeArr[i+1] = snakeArr[i];
+}
+
   // Part 2: Display the Snake & Food
   //.Display the Snake
   board.innerHTML = "";
