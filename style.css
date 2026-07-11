@@ -27,13 +27,14 @@
   background-color: red;
 }
 
-
 .snake {
   background-color: purple;
-  border: .25vmin solid white;
+  border: 0.25vmin solid white;
   border-radius: 12px;
 }
 
 .food {
-  background-color: yellow;
+  background: linear-gradient(red, purple);
+  border: 0.25vmin solid black;
+  border-radius: 8px;
 }
