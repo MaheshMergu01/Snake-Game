@@ -30,6 +30,8 @@
 
 .snake {
   background-color: purple;
+  border: .25vmin solid white;
+  border-radius: 12px;
 }
 
 .food {
