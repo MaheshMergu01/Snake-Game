@@ -13,6 +13,14 @@
   align-items: center;
 }
 
+#score {
+  position: absolute;
+  top: 9px;
+  right: 200px;
+  font-size: 39px;
+  font-weight: bold;
+}
+
 #board {
   background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
   width: 90vmin;
