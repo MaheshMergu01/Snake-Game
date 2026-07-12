@@ -14,7 +14,7 @@ food = { x: 6, y: 7 };
 // Game Functions
 function main(ctime) {
   window.requestAnimationFrame(main);
-  // console.log(ctime);
+// console.log(ctime);
   if ((ctime - lastPaintTime) / 1000 < 1 / speed) {
     return;
   }
@@ -52,7 +52,7 @@ function gameEngine() {
   if (snakeArr[0].y === food.y && snakeArr[0].x === food.x) {
     foodSound.play();
     score += 1;
-    score.innerHTML = 'Score: ' + score;
+    scoreBox.innerHTML = 'Score: ' + score;
     snakeArr.unshift({
       x: snakeArr[0].x + inputDir.x,
       y: snakeArr[0].y + inputDir.y
@@ -98,7 +98,8 @@ function gameEngine() {
 // Main Logics
 window.requestAnimationFrame(main);
 window.addEventListener("keydown", e => {
-  inputDir = { x: 0, y: 1 }; // Start the Game
+  inputDir = { x: 0, y: 1 }; 
+// Start the Game
   moveSound.play();
   switch (e.key) {
     case "ArrowUp":
