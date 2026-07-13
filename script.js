@@ -105,6 +105,7 @@ function gameEngine() {
   board.appendChild(foodElement);
 }
 // Main Logics
+musicSound.play();
 let highscore = localStorage.getItem("highscore");
 if (highscore === null) {
   highscoreval = 0;
